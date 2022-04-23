@@ -1,0 +1,10 @@
+---
+- name: Set up new cluster device
+  hosts: slaves
+  tasks:
+
+  - name: Add Ansible specific user
+    ansible.builtin.user:
+      name: ansible_agent
+      group: sudo
+      state: present
