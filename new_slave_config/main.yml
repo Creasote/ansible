@@ -8,3 +8,7 @@
       name: ansible_agent
       group: sudo
       state: present
+
+  - name: update repo index
+    apt:
+      update_cache: yes
